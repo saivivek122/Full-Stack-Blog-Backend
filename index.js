@@ -7,7 +7,7 @@ import webHookRouter from "./routes/webhook.route.js"
 import {clerkMiddleware, requireAuth} from '@clerk/express'
 import cors from "cors"
 const app=express()
-app.use(cors(process.env.CLIENT_URL))
+app.use(cors(process.env.CLIENT_URL) )
 
 app.use("/webhooks",webHookRouter)
 app.use(clerkMiddleware())
